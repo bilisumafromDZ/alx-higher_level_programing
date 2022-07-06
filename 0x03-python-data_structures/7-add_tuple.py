@@ -1,17 +1,16 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    tuple_a = validate_tuple(tuple_a)
-    tuple_b = validate_tuple(tuple_b)
+    new_tuple = ()
+    len_t_a = len(tuple_a)
+    len_t_b = len(tuple_b)
 
-     return ((tuple_a[0] + tuple_b[0]), (tuple_a[1] + tuple_b[1]))
+    if len_t_a < 2:
+        tuple_a += (0, 0,)
 
- def validate_tuple(_tuple=()):
-     if len(_tuple) < 2:
-         if len(_tuple) == 1:
-              _tuple = (_tuple[0], 0)
-        elif len(_tuple) == 0:
-            _tuple = (0, 0)
-        elif len(_tuple) > 2:
-            _tuple = (_tuple[0], _tuple[1])
+    if len_t_b < 2:
+         tuple_b += (0, 0,)
 
-        return _tuple
+    a = tuple_a[0] + tuple_b[0]
+    b = tuple_a[1] + tuple_b[1]
+    new_tuple += (a, b, )
+    return (new_tuple)
