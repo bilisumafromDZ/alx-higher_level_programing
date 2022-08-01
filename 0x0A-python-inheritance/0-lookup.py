@@ -1,18 +1,6 @@
 #!/usr/bin/python3
-"""
-Module : `0-lookup.py`
-
-Returns the list of available attributes and methods of an object
-
-"""
+"""Defines an object attribute lookup function."""
 
 def lookup(obj):
-    """Function: lookup
-        Args:
-            obj: Object
-        Return:
-            list with methods and attributes
-        
-        """
-        obj_namespace = dir(obj)
-        return obj_namespace
+    """Return a list of an object's available attributes."""
+    return (dir(obj))
