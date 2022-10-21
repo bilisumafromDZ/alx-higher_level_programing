@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-"""Fetches https://intranet.hbtn.io/status."""
+"""
+Returns a formatted response using urllib
+"""
 import requests
 
 
-if __name__ == "__main__":
-    r = requests.get("https://alx-intranet.hbtn.io/status")
-     print("Body response:")
-     print("\t- type: {}".format(type(r.text)))
-      print("\t- content: {}".format(r.text))
+req = requests.get('https://alx-intranet.hbtn.io/status')
+data = req.text
+data_type = type(data)
+
+print("Body response:")
+print("\t- type: {}".format(data_type))
+print("\t- content: {}".format(data))
